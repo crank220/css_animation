@@ -14,7 +14,6 @@
         initCircles();
         animate();
         addListeners();
-        addListeners();
     }
 
     // Init Canvas
@@ -126,7 +125,7 @@
     // event handlers
     function addListeners() {
         // form.addEventListener('submit', function(e) {
-        input.value = '1BGM'
+        input.value = 'HELLO'
         // e.preventDefault();
         // if(textFormed) {
         //     explode();
@@ -141,14 +140,17 @@
         //     createText(input.value.toUpperCase());
         // }
         setTimeout(function() {
-            createText('1BGM');
+            createText(navigator.platform);
         }, 800);
         setTimeout(function() {
-            createText('天音在线');
+            createText(navigator.product);
         }, 1600);
         setTimeout(function() {
-            createText('凯伦');
+            createText(navigator.vendor);
         }, 2400);
+        setTimeout(function() {
+            alert(navigator.userAgent)
+        }, 3200);
         // });
     }
 
